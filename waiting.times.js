@@ -19,7 +19,16 @@ Sample Output:
 
 const minimumTotalWaitingTime = (patientTimes) => {
   const sortedPatientTimes = patientTimes.toSorted((a, b) => a - b);
-  return sortedPatientTimes;
+  let totalWaitingTime = 0;
+  for (let i = 0; i < sortedPatientTimes.length; i++) {
+    const waitingTimesBeforeIndex = sortedPatientTimes.slice(0, i)
+    let waitingTime = 0;
+    for (const singleWaitingTime of waitingTimesBeforeIndex) {
+      waitingTime += singleWaitingTime;
+    }
+    totalWaitingTime += waitingTime
+  }
+  return totalWaitingTime;
 }
 
 const result = minimumTotalWaitingTime([3, 2, 1, 2, 6])
