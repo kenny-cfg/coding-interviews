@@ -32,4 +32,4 @@ const minimumTotalWaitingTime = (patientTimes) => {
 }
 
 const result = minimumTotalWaitingTime([3, 2, 1, 2, 6])
-console.log(result);
+console.log(result);about:blank#blocked
