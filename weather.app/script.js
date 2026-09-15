@@ -1,4 +1,6 @@
-const searchButton = document.getElementById("search");
+const searchButton = document.getElementById('search');
+const cityNameInput = document.getElementById('city-name');
 searchButton.addEventListener('click', () => {
-  console.log('CLICK!');
+  const text = cityNameInput.value;
+  console.log('CLICK!', text);
 })
